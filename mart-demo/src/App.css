@@ -14,7 +14,7 @@ h1 {
 }
 
 h3 {
-    font-size: calc(20px + 2vmin);
+    font-size: 30px;
     display: flex;
     align-items: center;
     color: rgb(117, 14, 121);
@@ -48,7 +48,7 @@ h3 {
 }
 
 .App {
-    background-color: white;
+    background: white;
     box-sizing: border-box;
     padding-left: 80px;
     min-height: vh;
@@ -58,4 +58,13 @@ h3 {
     justify-content: left;
     font-size: calc(3px + 2vmin);
     color: #282c34;
+}
+
+.page-container {
+    padding: 45px;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }

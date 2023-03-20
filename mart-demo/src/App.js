@@ -5,17 +5,27 @@ import OilHighlights from './OilHighlights';
 import OilSearch from './OilSearch';
 import WatercolorHighlights from './WatercolorHighlights';
 import WatercolorSearch from './WatercolorSearch';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 
 
 const Home = () => (
     <div>
         <h1>Be inspired by the MET collections!</h1>
-        <h3>Select artwork medium :</h3>
-        <p>Oil paintings</p>
-        <p>Watercolors</p>
-        <p>Drawings</p>
-    </div>
+        <div className='page-container' >
+            <h3>Select artwork medium :</h3>
+            <ul>
+                <li>
+                    <Link to="/oils">Oil paintings</Link>
+                </li>
+                <li>
+                    <Link to="/watercolors">Watercolors</Link>
+                </li>
+                <li>
+                    <Link to="/drawings">Drawings</Link>
+                </li >
+            </ul >
+        </div>
+    </div >
 );
 
 
