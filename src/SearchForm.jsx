@@ -33,17 +33,17 @@ export default function SearchForm({ medium }) {
                     <div class="form-group">
                         <div class="col-md-6">
                             <p>
-                                <input type="text" class="form-control" id="key-word" placeholder='Type a key word' value={keyword} onChange={e => setKeyword(e.target.value)} />
+                                <input type="text" class="form-control w-50" id="key-word" placeholder='Type a key word' value={keyword} onChange={e => setKeyword(e.target.value)} />
                             </p>
                         </div>
                         <div class="col-md-6">
                             <p>
-                                <input type="text" id="art-title" class="form-control" placeholder='Type a title' value={artTitle} onChange={e => setArtTitle(e.target.value)} />
+                                <input type="text" id="art-title" class="form-control w-50" placeholder='Type a title' value={artTitle} onChange={e => setArtTitle(e.target.value)} />
                             </p>
                         </div>
                         <div class="col-md-6">
                             <p>
-                                <input type="text" id="artistOrCulture" class="form-control" placeholder='Type an artist or culture' value={artistOrCulture} onChange={e => setArtistOrCulture(e.target.value)} />
+                                <input type="text" id="artistOrCulture" class="form-control w-50" placeholder='Type an artist or culture' value={artistOrCulture} onChange={e => setArtistOrCulture(e.target.value)} />
                             </p>
                         </div>
                         <button class="btn btn-primary" type="button" onClick={handleSubmit}>Submit</button>
