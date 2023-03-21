@@ -29,24 +29,24 @@ export default function SearchForm({ medium }) {
         <>
             <div>
                 <h3>Search for more</h3>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div class="col-md-6">
+                <form className="form-inline">
+                    <div className="form-group">
+                        <div className="col-md-6">
                             <p>
-                                <input type="text" class="form-control w-50" id="key-word" placeholder='Type a key word' value={keyword} onChange={e => setKeyword(e.target.value)} />
+                                <input type="text" className="form-control w-50" id="key-word" placeholder='Type a key word' value={keyword} onChange={e => setKeyword(e.target.value)} />
                             </p>
                         </div>
-                        <div class="col-md-6">
+                        <div className="col-md-6">
                             <p>
-                                <input type="text" id="art-title" class="form-control w-50" placeholder='Type a title' value={artTitle} onChange={e => setArtTitle(e.target.value)} />
+                                <input type="text" id="art-title" className="form-control w-50" placeholder='Type a title' value={artTitle} onChange={e => setArtTitle(e.target.value)} />
                             </p>
                         </div>
-                        <div class="col-md-6">
+                        <div className="col-md-6">
                             <p>
-                                <input type="text" id="artistOrCulture" class="form-control w-50" placeholder='Type an artist or culture' value={artistOrCulture} onChange={e => setArtistOrCulture(e.target.value)} />
+                                <input type="text" id="artistOrCulture" className="form-control w-50" placeholder='Type an artist or culture' value={artistOrCulture} onChange={e => setArtistOrCulture(e.target.value)} />
                             </p>
                         </div>
-                        <button class="btn btn-primary" type="button" onClick={handleSubmit}>Submit</button>
+                        <button className="btn btn-primary" type="button" onClick={handleSubmit}>Submit</button>
                     </div>
                     <span id='back-link'>
                         <Link to="/">Homepage</Link></span>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import dict from './artitems.json';
 import PropTypes from 'prop-types';
-import SearchForm from './SearchForm';
 
 
 
@@ -12,17 +10,16 @@ export function RenderHighlights({ artProfile }) {
         if (artProfile !== undefined) {
             artProfile.map((artObjectId, idx) => {
                 const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${artObjectId}`
-                console.log("art obj id", artObjectId)
                 fetch(url)
                     .then(response => response.json())
                     .then(
                         (data) => {
-                            let newArtDetail = {
-                                'title': data.title,
-                                'primaryImage': data.primaryImage,
-                                'artistDisplayName': data.artistDisplayName,
-                            };
                             if (data.primaryImage != '') {
+                                let newArtDetail = {
+                                    'title': data.title,
+                                    'primaryImage': data.primaryImage,
+                                    'artistDisplayName': data.artistDisplayName,
+                                };
                                 setArtDetails(a => [...a, newArtDetail]);
                             }
                         },
