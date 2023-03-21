@@ -20,7 +20,9 @@ export default function SearchForm({ medium }) {
             const paramString = JSON.stringify(params)
             navigate(`/${medium}/search/${paramString}`)
         }
-
+        if (keyword === undefined && artTitle === undefined && artistOrCulture === undefined) {
+            alert('At least one parameter should be specified to search')
+        }
     }
 
     return (

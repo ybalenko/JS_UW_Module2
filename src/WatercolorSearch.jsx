@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { RenderWatercolorHighlights, parseData } from './WatercolorHighlights';
+import { parseData } from './ParseData';
+import { RenderHighlights } from './RenderHighlights';
 
 
 export default function WatercolorSearch() {
@@ -22,7 +23,7 @@ export default function WatercolorSearch() {
         <>
             <div>
                 <h1>Watercolor search results for {paramObj.keyword} {paramObj.artistOrCulture} {paramObj.artTitle}</h1>
-                <RenderWatercolorHighlights artProfile={artItem} />
+                <RenderHighlights artProfile={artItem} />
                 <p id='back-link'>
                     <Link to="/">Homepage</Link></p>
                 <p id='back-link'>

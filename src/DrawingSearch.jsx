@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import { RenderWatercolorHighlights, parseData } from './WatercolorHighlights';
+import { parseData } from './ParseData';
+import { RenderHighlights } from './RenderHighlights';
 
 
 export default function DrawingsSearch() {
@@ -21,7 +22,7 @@ export default function DrawingsSearch() {
         <>
             <div>
                 <h1>Drawings search results for {paramObj.keyword} {paramObj.artistOrCulture} {paramObj.artTitle}</h1>
-                <RenderWatercolorHighlights artProfile={artItem} />
+                <RenderHighlights artProfile={artItem} />
                 <p id='back-link'>
                     <Link to="/">Homepage</Link></p>
                 <p id='back-link'>

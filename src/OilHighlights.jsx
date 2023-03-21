@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import dict from './artitems.json';
-import { getRandomInt, RenderWatercolorHighlights, parseData } from './WatercolorHighlights';
+import { getRandomInt, parseData } from './ParseData';
 import SearchForm from './SearchForm';
+import { RenderHighlights } from './RenderHighlights';
 
 
 export default function OilHighlights() {
@@ -23,7 +24,7 @@ export default function OilHighlights() {
         <>
             <div>
                 <h1>Oil inspirations from the MET collections</h1>
-                <RenderWatercolorHighlights artProfile={artItem} />
+                <RenderHighlights artProfile={artItem} />
                 <SearchForm medium="oils" />
             </div>
         </>
